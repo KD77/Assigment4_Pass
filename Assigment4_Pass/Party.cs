@@ -40,6 +40,25 @@ namespace Assigment4_Pass
             }
             return numGuests;
         }
+        public bool AddNewGuest(string firstName, string lastName)
+        {
+            bool ok = true;
+            int vacantPos = FindVacantPos();
+            if (vacantPos != -1)
+            {
+                guestList[vacantPos] = FullName(firstName, lastName);
+            }
+            else
+                ok = false;
+
+
+            return ok;
+        }
+        private string FullName(string firstName, string lastName)
+        {
+            return lastName.ToUpper() + "," + firstName;
+
+        }
         private int FindVacantPos()
         {
             int vacantPos = -1;
@@ -73,6 +92,30 @@ namespace Assigment4_Pass
                 }
             }
             return guests;
+        }
+        public bool DeleteAt(int index)
+        {
+            bool ok = false;
+            if (CheckIndex(index))
+            {
+                guestList[index] = string.Empty;
+                MoveElementsOneStepToLeft(index);
+                ok = true;
+            }
+            return ok;
+        }
+        private void MoveElementsOneStepToLeft(int index)
+        {
+            for(int i=index+1; i< guestList.Length; i++)
+            {
+                guestList[i - 1] = guestList[i];// move 1 step to left
+                guestList[i] = string.Empty;// empty its place
+
+            }
+        }
+        public bool CheckIndex(int index)
+        {
+            return(index >= 0) && (index < guestList.Length);
         }
     }
 }

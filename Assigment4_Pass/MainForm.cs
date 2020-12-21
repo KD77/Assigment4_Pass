@@ -17,6 +17,24 @@ namespace Assigment4_Pass
             InitializeComponent();
         }
 
+        private void InitializeGUI()
+        {
+            txtLastName.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+
+            lblNumOfGuestList.Text = string.Empty;
+            lblTotalCost.Text = "0.0";
+            lstAllGuests.Items.Clear();
+
+
+            // disable the add guest groupbox
+            grpAddGuests.Enabled = false;
+            // enabe the create new party groupbox
+            grtNewParty.Enabled = true;
+
+
+
+        }
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -28,6 +46,11 @@ namespace Assigment4_Pass
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateList_Click(object sender, EventArgs e)
         {
 
         }
