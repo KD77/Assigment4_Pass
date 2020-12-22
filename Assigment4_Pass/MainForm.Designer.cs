@@ -32,7 +32,7 @@ namespace Assigment4_Pass
             this.grtNewParty = new System.Windows.Forms.GroupBox();
             this.btnCreateList = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaxNum = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.grpAddGuests = new System.Windows.Forms.GroupBox();
@@ -56,7 +56,7 @@ namespace Assigment4_Pass
             // 
             this.grtNewParty.Controls.Add(this.btnCreateList);
             this.grtNewParty.Controls.Add(this.textBox2);
-            this.grtNewParty.Controls.Add(this.textBox1);
+            this.grtNewParty.Controls.Add(this.txtMaxNum);
             this.grtNewParty.Controls.Add(this.label2);
             this.grtNewParty.Controls.Add(this.lbl1);
             this.grtNewParty.ForeColor = System.Drawing.Color.Teal;
@@ -85,12 +85,12 @@ namespace Assigment4_Pass
             this.textBox2.Size = new System.Drawing.Size(153, 31);
             this.textBox2.TabIndex = 3;
             // 
-            // textBox1
+            // txtMaxNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(282, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 31);
-            this.textBox1.TabIndex = 2;
+            this.txtMaxNum.Location = new System.Drawing.Point(282, 51);
+            this.txtMaxNum.Name = "txtMaxNum";
+            this.txtMaxNum.Size = new System.Drawing.Size(153, 31);
+            this.txtMaxNum.TabIndex = 2;
             // 
             // label2
             // 
@@ -136,6 +136,7 @@ namespace Assigment4_Pass
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtLastName
             // 
@@ -267,7 +268,7 @@ namespace Assigment4_Pass
         private System.Windows.Forms.GroupBox grtNewParty;
         private System.Windows.Forms.Button btnCreateList;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaxNum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.GroupBox grpAddGuests;
