@@ -59,7 +59,7 @@ namespace Assigment4_Pass
                 return;
             bool amountOK = ReadCostPerPerson();
 
-            if(maxNumOk && amountOK)
+            if (maxNumOk && amountOK)
             {
                 grpAddGuests.Enabled = true;
                 UpdateGUI();
@@ -69,7 +69,7 @@ namespace Assigment4_Pass
         {
             int maxNumber = 0;
             bool ok = true;
-            if (int.TryParse(txtMaxNum.Text,out maxNumber) && (maxNumber > 0))
+            if (int.TryParse(txtMaxNum.Text, out maxNumber) && (maxNumber > 0))
             {
                 party = new Party(maxNumber);
                 MessageBox.Show($"party list with space for {maxNumber} guests created!", "success");
@@ -122,19 +122,19 @@ namespace Assigment4_Pass
 
         private bool TrimNames()
         {
-            if ((!ValidateText(txtFirstName.Text))|| (!ValidateText(txtLastName.Text)))
+            if ((!ValidateText(txtFirstName.Text)) || (!ValidateText(txtLastName.Text)))
                 return false;
 
             txtFirstName.Text = txtFirstName.Text.Trim();
             txtLastName.Text = txtLastName.Text.Trim();
             return true;
 
-    }
+        }
         private bool ValidateText(string text)
         {
             text = text.Trim();
 
-            if( string.IsNullOrEmpty(text))
+            if (string.IsNullOrEmpty(text))
             {
                 MessageBox.Show("please provide both the first name and te second name .", "Error");
                 return false;
@@ -143,4 +143,5 @@ namespace Assigment4_Pass
             return true;
 
         }
+    }
 }
