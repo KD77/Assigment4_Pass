@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assigment4_Pass
 {
+    // hello
     class Party
     {
         private double costPerCapita;
